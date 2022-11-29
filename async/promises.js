@@ -40,4 +40,4 @@ hola("Gus")
     .catch(error => {
         console.error("Ha habido un error: ");
         console.error(error);
-    })
+    }) 
