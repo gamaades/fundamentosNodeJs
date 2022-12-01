@@ -1,4 +1,4 @@
-// Solo colocando async delante de la función, esta es convertida en una funcion asincrona declarada y que podemos empezar a utilizar con el aweit.
+// La palabra async  la convierte inmediatamente en asíncrona.
 async function hola(nombre) {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
@@ -8,7 +8,7 @@ async function hola(nombre) {
     });
 }
 
-function hablar(nombre) {
+async function hablar(nombre) {
     return new Promise((resolve, reject) => {
         setTimeout(function() {
             console.log("Bla bla bla bla...");
@@ -18,7 +18,7 @@ function hablar(nombre) {
     });
 }
 
-function adios(nombre) {
+async function adios(nombre) {
     return new Promise(function(resolve, reject) {
         setTimeout(function() {
             console.log("Adios!, " + nombre);
@@ -27,10 +27,11 @@ function adios(nombre) {
     });
 }
 
+// Await solo es válido dentro de una función asíncrona.
 async function main() {
     let nombre = await hola("Gustavo");
-    await hablar();
-    await hablar();
+    await hablar(); 
+    hablar(); // Para hacer que se ejecute en segundo plano no debe existir el await
     await hablar();
     await hablar();
     await adios(nombre);
@@ -39,5 +40,5 @@ async function main() {
 
 console.log("Empezamos el proceso");
 main();
-// esto es asincrono porque lo que agregmos se ejecutara de segunda instancia
+// Esto nos permitirá saber si nuestra función se está ejecutando de forma asíncrona.
 console.log("Va a ser la segunda instrucción");
