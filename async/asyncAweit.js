@@ -38,7 +38,8 @@ async function main() {
     console.log("Termina el proceso");
 }
 
-console.log("Empezamos el proceso");
+console.log("Empezamos el proceso.");
 main();
 // Esto nos permitirá saber si nuestra función se está ejecutando de forma asíncrona.
 console.log("Va a ser la segunda instrucción");
+
