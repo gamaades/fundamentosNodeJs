@@ -1,1 +1,8 @@
 /node_modules
+herramientas/node_modules
+modulos/node_modules
+paquetes/npm/node_modules
+paquetes/utilies/node_modules
+modulos/nativos/build/node_gyp_bins/python3
+herramientas/automatizacion/node_modules
+herramientas/scrapping/node_modules

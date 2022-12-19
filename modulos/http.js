@@ -1,7 +1,7 @@
 const http = require("http");
 // importamos el modulo
 // es recomenado no inicializar la funcion aquñi por los callbacks
-http.createServer(router).listen(3006);
+http.createServer(router).listen(3000);
 
 function router(req, res) { // se le da 2 parametros request y response
     console.log("Nueva petición!");
@@ -28,4 +28,4 @@ function router(req, res) { // se le da 2 parametros request y response
     // res.end(); 
 }
 
-console.info("Escuchando HTTP en el puerto 3006");
+console.info("Escuchando HTTP en el puerto 3000");
